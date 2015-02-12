@@ -237,9 +237,8 @@ symbols(log(GDP_per_person), log(SO2012Ctry$pop), circles=(SO2012Ctry$Total))
 # plotting character.
 
 # your plotting code here
-symbols(log(GDP_per_person[SO2012Ctry$Total>0]), log(SO2012Ctry$pop[SO2012Ctry$Total>0]), circles=log(SO2012Ctry$Total[SO2012Ctry$Total >0]))
+symbols(log(GDP_per_person[SO2012Ctry$Total>0]), log(SO2012Ctry$pop[SO2012Ctry$Total>0]), circles=sqrt(SO2012Ctry$Total[SO2012Ctry$Total>0]), main="Top 5 Countries with Most Medals in Summer 2012 Olympics", xlab= "Country GDP per Person", ylab="Country Population")
 symbols(log(GDP_per_person[SO2012Ctry$Total==0]), log(SO2012Ctry$pop[SO2012Ctry$Total==0]), circles=log(SO2012Ctry$Total[SO2012Ctry$Total ==0]), add=T)
-
 
 
 # Q9. Make the plot information rich by adding axis labels, 
@@ -265,9 +264,9 @@ top5<- decmedal$Country[1:5]
 
 
 # your plotting code here, including a new call to text() 
-plot(log(GDP_per_person), log(SO2012Ctry$pop), ylab="Country Population", xlab="Country GDP per person", main="Top 5 Countries with most medals in Summer 2012 Olympics")
-symbols(log(GDP_per_person), log(SO2012Ctry$pop), circles=SO2012Ctry$Total)
-text(SO2012Ctry[with(SO2012Ctry,order(Total, decreasing=T)),]$GDPPP[1:5], SO2012Ctry[with(SO2012Ctry,order(Total, decreasing=T)),]$pop[1:5], top5)
+symbols(log(GDP_per_person[SO2012Ctry$Total>0]), log(SO2012Ctry$pop[SO2012Ctry$Total>0]), circles=sqrt(SO2012Ctry$Total[SO2012Ctry$Total>0]), main="Top 5 Countries with Most Medals in Summer 2012 Olympics", xlab= "Country GDP per Person", ylab="Country Population")
+symbols(log(GDP_per_person[SO2012Ctry$Total==0]), log(SO2012Ctry$pop[SO2012Ctry$Total==0]), circles=log(SO2012Ctry$Total[SO2012Ctry$Total ==0]), add=T)
+text(log(decmedal$GDPPP)[1:5], log(decmedal$pop)[1:5], top5)
 
 ######################################
 # PLOT 3.
@@ -379,8 +378,6 @@ n.athletes <- nrow(athletes)
 
 
 # How many women competed?
-nrow(athletes$Sex=="F")
-nrow(athletes[athletes$Sex=="F",])
 sum(athletes$Sex=="F")
 
 # What proportion of the participants were women?
