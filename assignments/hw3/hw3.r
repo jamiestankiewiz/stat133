@@ -257,7 +257,7 @@ wonMedal <- SO2012Ctry[SO2012Ctry$Total>0,]
 
 # Your ggplot commands here.
 
-ggplot(World, aes(x=World$long, y=World$lat)) + geom_polygon(aes(group=group), fill="grey40", colour="grey90") + geom_point(data=wonMedal, aes(x=wonMedal$longitude, y=wonMedal$latitude, size=wonMedal$Total, fill="gold"))
+ggplot(World, aes(x=World$long, y=World$lat)) + geom_polygon(aes(group=group), fill="grey40", colour="grey90") + geom_point(data=wonMedal, aes(x=wonMedal$longitude, y=wonMedal$latitude, size=wonMedal$Total, colour="gold"))
 
 
 ## Not needed
@@ -333,6 +333,4 @@ sd.rain <- sapply(rain, sd)
 
 # Create a variable 
 # n1989.rain : a vector of length 5 with the number of measurements at each station in the year 1989 (use [day])
-n1989.rain <- sapply(day, function(x) length(unique(floor(x))))
-n1989.rain <- sapply(day, function(x) length(unique(floor(x==1989))))
-
+n1989.rain <- sapply(day, function(x) sum(floor(x)==1989))
