@@ -332,5 +332,6 @@ mean.rain <- sapply(rain, mean)
 sd.rain <- sapply(rain, sd)
 
 # Create a variable 
+
 # n1989.rain : a vector of length 5 with the number of measurements at each station in the year 1989 (use [day])
 n1989.rain <- sapply(day, function(x) sum(floor(x)==1989))
