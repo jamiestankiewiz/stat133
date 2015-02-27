@@ -13,10 +13,10 @@
 # <element.lengths>: a numeric vector whose entries are the lengths of each
 #   element of <data.list>
 
+
 listLengths <- function(data.list) {
-
+  element.lengths <- length(data.list)
     # your code here
-
 }
 
 #### Function 2
@@ -30,10 +30,13 @@ listLengths <- function(data.list) {
 # <x.powers> : A matrix of size [n x k] where the first column is x, the second column x^2, the third column x^4, etc.
 #              the column names should be : "x", "x^2", "x^3" etc.
 
-powers <- function(x, k){
-
+powers <- function(x,k) {
+  x.powers <- matrix(nrow=k, ncol=x)
+  for (rows in 1:k)
+    for (cols in 1:x)
+      x.powers[rows,cols] <- x^cols
+  return(x.powers)
 }
-
  
 #### Function #3
 #### Implement the function "recipeConversion"
@@ -64,8 +67,14 @@ powers <- function(x, k){
 
 # Put your code here
 recipeConversion <- function(recipe){
-
+  stopifnot(all(colnames(recipe) == c("amount", "unit", "ingredient")))
+  if (unit %in% recipe == "cup")
+    replace("cup", values= "ml")
+  if (match(recipe$amount, recipe$unit=="cup"))
+    replace(amount, values = 236.6*amount)
+ 
 }
+
 
 
 #### Function #4a
@@ -89,9 +98,15 @@ recipeConversion <- function(recipe){
 # -- Calculate, and store, the mean of this bootstrap sample, call that mu_i (i in 1:B)
 # -- The bootstrap variance is the sample variance of mu_1, mu_2, ..., mu_B
 
+B <- 1:1000
 bootstrapVarEst <- function(x, B){
-
+  for (i in 1:B) {
+    bootstrapsample <- sample(B, size=n, replace=T) 
+    mu_i[i] <- mean(bootstrapsample)
+  }
+  boot.sigma2.ext <-  var(mu_i)
 }
+  
 
 #### Function #4b
 #### Implement the function "jackknifeVarEst"
@@ -111,9 +126,20 @@ bootstrapVarEst <- function(x, B){
 #     for this reduced sample calculate the sample mean (get mu_1, mu_2, ..., mu_n)
 # -- The jackknife variance is the sample variance of mu_1, mu_2, ..., mu_n
 
-jackknifeVarEst <- fuction(x){
-
-}
+jackknifeVarEst <- function(x){
+  lenx <- length(x)
+  for (i in 1:lenx) {
+    if i = 1
+    mu_i[1] <- mean(x[2:lenx])
+    if i = lenx
+    mu_i[lenx] <- mean(x[1:(lenx-1)])
+    else
+      part1 <- x[1:(i-1)]
+      part2 <- x[(i+1):lenx]
+    mu_i[i] <- mean(part1 + part2)  
+  }
+   jack.sigma2.est <- var(mu_i)
+  
 
 #### Function #4c
 #### Implement the function "samplingVarEst"
@@ -127,8 +153,12 @@ jackknifeVarEst <- fuction(x){
 
 # Note: this function calls the previous two functions.
 
-samplingVarEst <- function(  ){
-
+samplingVarEst <- function(x,type){
+  if type == "bootstrap"
+  out <- bootstrapvarest(x,1000)
+  else
+    out <- jackknifevarest(x)
 }
 
+sampling.sigma.est <- out
 
