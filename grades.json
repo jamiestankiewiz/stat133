@@ -1,0 +1,23 @@
+{
+    "email": "jamie.stankiewiz@berkeley.edu", 
+    "github_name": "jamiestankiewiz", 
+    "grades": {
+        "hw1": {
+            "note": "", 
+            "hash": "fe116bedeed6f6bf91a14f9ee78d28ee2027479c", 
+            "earned": 20, 
+            "possible": 20, 
+            "penalty": 0, 
+            "parts": {
+                "hw1": {
+                    "possible": 20, 
+                    "earned": 20
+                }
+            }
+        }
+    }, 
+    "login": "jamiestankiewiz", 
+    "name": "Jamie Stankiewiz", 
+    "status": "enrolled", 
+    "url": "git@github.com:jamiestankiewiz/stat133.git"
+}
