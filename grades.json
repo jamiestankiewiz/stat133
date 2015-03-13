@@ -19,5 +19,6 @@
     "login": "jamiestankiewiz", 
     "name": "Jamie Stankiewiz", 
     "status": "enrolled", 
-    "url": "git@github.com:jamiestankiewiz/stat133.git"
+    "url": "git@github.com:jamiestankiewiz/stat133.git", 
+    "section": "lab4"
 }
