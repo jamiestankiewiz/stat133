@@ -1,0 +1,590 @@
+INFO:root:Executed R('load(\'../../instructor/assignments/hw4/hw4-tests.rda\')')
+INFO:root:Executed R('library(plyr)')
+INFO:root:Executed R('listLengths.r <- listLengths(test$listLengths)')
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "listLengths"
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "listLengths"
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "listLengths"
+
+ERROR:root:(3 points) Checking R('all.equal(listLengths.r, sol$listLengths)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(listLengths.r, sol$listLengths) : 
+  object 'listLengths.r' not found
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(listLengths.r, sol$listLengths) : 
+  object 'listLengths.r' not found
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(listLengths.r, sol$listLengths) : 
+  object 'listLengths.r' not found
+
+ERROR:root:(1 points) Checking R('all.equal(length(listLengths.r), length(sol$listLengths))')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(length(listLengths.r), length(sol$listLengths)) : 
+  object 'listLengths.r' not found
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(length(listLengths.r), length(sol$listLengths)) : 
+  object 'listLengths.r' not found
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(length(listLengths.r), length(sol$listLengths)) : 
+  object 'listLengths.r' not found
+
+INFO:root:Executed R('powers.r <- powers(seq(1, 3, by = 1), 3)')
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : could not find function "powers"
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : could not find function "powers"
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : could not find function "powers"
+
+ERROR:root:(3 points) Checking R('all.equal(powers.r, sol$powers, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(powers.r, sol$powers, check.attributes = F) : 
+  object 'powers.r' not found
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(powers.r, sol$powers, check.attributes = F) : 
+  object 'powers.r' not found
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(powers.r, sol$powers, check.attributes = F) : 
+  object 'powers.r' not found
+
+ERROR:root:(1 points) Checking R('all.equal(length(powers.r), length(sol$powers), check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(length(powers.r), length(sol$powers), check.attributes = F) : 
+  object 'powers.r' not found
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(length(powers.r), length(sol$powers), check.attributes = F) : 
+  object 'powers.r' not found
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(length(powers.r), length(sol$powers), check.attributes = F) : 
+  object 'powers.r' not found
+
+INFO:root:Executed R('recipe.r <- recipeConversion(test$recipe)')
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "recipeConversion"
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "recipeConversion"
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "recipeConversion"
+
+ERROR:root:(3 points) Checking R('all.equal(recipe.r, sol$recipe, check.attributes=F, tolerance=1e-1)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(recipe.r, sol$recipe, check.attributes = F, tolerance = 0.1) : 
+  object 'recipe.r' not found
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(recipe.r, sol$recipe, check.attributes = F, tolerance = 0.1) : 
+  object 'recipe.r' not found
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(recipe.r, sol$recipe, check.attributes = F, tolerance = 0.1) : 
+  object 'recipe.r' not found
+
+INFO:root:Executed R('bootstrapVarEst.r <- bootstrapVarEst(test$bootstrapVarEst.x, test$bootstrapVarEst.B)')
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "bootstrapVarEst"
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "bootstrapVarEst"
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "bootstrapVarEst"
+
+ERROR:root:(3 points) Checking R('all.equal(bootstrapVarEst.r, sol$bootstrapVarEst, check.attributes=F, tolerance=1)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(bootstrapVarEst.r, sol$bootstrapVarEst, check.attributes = F,  : 
+  object 'bootstrapVarEst.r' not found
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(bootstrapVarEst.r, sol$bootstrapVarEst, check.attributes = F,  : 
+  object 'bootstrapVarEst.r' not found
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(bootstrapVarEst.r, sol$bootstrapVarEst, check.attributes = F,  : 
+  object 'bootstrapVarEst.r' not found
+
+INFO:root:Executed R('jackknifeVarEst.r <- jackknifeVarEst(test$jackknifeVarEst.x)')
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "jackknifeVarEst"
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "jackknifeVarEst"
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "jackknifeVarEst"
+
+ERROR:root:(3 points) Checking R('all.equal(jackknifeVarEst.r, sol$jackknifeVarEst, check.attributes=F, tolerance=1e-1)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(jackknifeVarEst.r, sol$jackknifeVarEst, check.attributes = F,  : 
+  object 'jackknifeVarEst.r' not found
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(jackknifeVarEst.r, sol$jackknifeVarEst, check.attributes = F,  : 
+  object 'jackknifeVarEst.r' not found
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(jackknifeVarEst.r, sol$jackknifeVarEst, check.attributes = F,  : 
+  object 'jackknifeVarEst.r' not found
+
+INFO:root:Executed R('samplingVarEst.r <- samplingVarEst(test$samplingVarEst.x, test$samplingVarEst.type)')
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "samplingVarEst"
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "samplingVarEst"
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in eval(expr, envir, enclos) : 
+  could not find function "samplingVarEst"
+
+ERROR:root:(3 points) Checking R('all.equal(samplingVarEst.r, sol$samplingVarEst, check.attributes=F, tolerance=1e-1)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(samplingVarEst.r, sol$samplingVarEst, check.attributes = F,  : 
+  object 'samplingVarEst.r' not found
+
+ERROR:root:Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(samplingVarEst.r, sol$samplingVarEst, check.attributes = F,  : 
+  object 'samplingVarEst.r' not found
+
+Traceback (most recent call last):
+  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(samplingVarEst.r, sol$samplingVarEst, check.attributes = F,  : 
+  object 'samplingVarEst.r' not found
+
+INFO:root:You got a 0 out of 20.
