@@ -126,20 +126,21 @@ bootstrapVarEst <- function(x, B){
 #     for this reduced sample calculate the sample mean (get mu_1, mu_2, ..., mu_n)
 # -- The jackknife variance is the sample variance of mu_1, mu_2, ..., mu_n
 
+# PLEASE READ THE DOC FOR IF/ELSE STATEMENTS, THANKS --ANDY
 jackknifeVarEst <- function(x){
-  lenx <- length(x)
-  for (i in 1:lenx) {
-    if i = 1
-    mu_i[1] <- mean(x[2:lenx])
-    if i = lenx
-    mu_i[lenx] <- mean(x[1:(lenx-1)])
-    else
-      part1 <- x[1:(i-1)]
-      part2 <- x[(i+1):lenx]
-    mu_i[i] <- mean(part1 + part2)  
-  }
-   jack.sigma2.est <- var(mu_i)
-  
+    # lenx <- length(x)
+  # for (i in 1:lenx) {
+      #  if i = 1
+      #  mu_i[1] <- mean(x[2:lenx])
+      # if i = lenx
+      # mu_i[lenx] <- mean(x[1:(lenx-1)])
+      # else
+      #  part1 <- x[1:(i-1)]
+         #  part2 <- x[(i+1):lenx]
+         #  mu_i[i] <- mean(part1 + part2)
+         #  }
+         #  jack.sigma2.est <- var(mu_i)
+}
 
 #### Function #4c
 #### Implement the function "samplingVarEst"
@@ -154,11 +155,11 @@ jackknifeVarEst <- function(x){
 # Note: this function calls the previous two functions.
 
 samplingVarEst <- function(x,type){
-  if type == "bootstrap"
-  out <- bootstrapvarest(x,1000)
-  else
-    out <- jackknifevarest(x)
+    #  if type == "bootstrap"
+    #  out <- bootstrapvarest(x,1000)
+    #  else
+    #    out <- jackknifevarest(x)
 }
 
-sampling.sigma.est <- out
+#sampling.sigma.est <- out
 
