@@ -14,6 +14,19 @@
                     "earned": 20
                 }
             }
+        }, 
+        "hw4": {
+            "note": "", 
+            "hash": "5a4ed636c5938d27ac6f82751e721ceb8a210d7b", 
+            "earned": 0, 
+            "possible": 20, 
+            "penalty": 0, 
+            "parts": {
+                "hw4": {
+                    "possible": 20, 
+                    "earned": 0
+                }
+            }
         }
     }, 
     "login": "jamiestankiewiz", 
