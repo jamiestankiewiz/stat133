@@ -9,7 +9,14 @@
 #   <num.dollar>: an integer indicating how many elements of <chvec> contain the "$"
 #     symbol. For example: numDollarElements(c('dollar', 'd$llar', '$$$')) should return 2
 
-
+numDollarElements <- function(chvec) {
+   num.dollar <- vector("character", length(chvec))
+   for (i in 1:length(chvec)){
+      if("$" %in% chvec[i])
+         num.dollar[i] <- 1
+   }
+      return(length(num.dollar))
+}
 
 # Write a function called prodDigits that compute the product of all (single) digits in
 # a string.  The function should return 0 if there is no digit in the
@@ -18,7 +25,14 @@
 #
 # and return the following
 #   <total>: A single number (the product of all digits in chvec)
-
+prodDigits <- function(chvec) {
+   chvec <- strsplit(chvec, split="")
+   vec<- vector("numeric", length(chvec))
+   for (i in 1:length(chvec)){
+      vec[i] <- chvec[i]
+   }
+   return(prod(vec))
+}
 
 
 # Some test cases:
@@ -35,6 +49,13 @@
 # and return
 #   <herchvec>: The same character vector with the required substitutions.
 
+
+hisToher <- function(chvec) {
+   herchvec <- gsub("him\\>", "her", chvec)
+   herchvec <- gsub("he\\>", "she", chvec)
+   herchvec <- gsub("his\\>", "her", chvec)
+   print(herchvec)
+}
 
 # A test case
 all.equal(
@@ -56,3 +77,26 @@ all.equal(
 # For example mostCommonLetter("aabbccccdddd") should return 
 # [1] "c" "d"
 
+mostCommonLetter <- function(chvec) {
+   chvec <- tolower(chvec)
+   chvec <- strsplit(chvec, split="")
+   chvec <- chvec[chvec != "[:alpha:]"]
+   
+   maxi <- max(unlist(chvec))
+   maxinums <- grep(maxi, unlist(chvec))
+   maxilength <- length(maxinums)
+
+   un <- unique(unlist(chvec))
+   for (i in 1:length(un)){
+      if (chvec[chvec == i] == )
+   }
+   
+   if(length(".") == maxilength){
+      return(c(\\1, maxi)
+   }
+   
+   else
+      mostCommonLetter <- 
+      max(unlist(chvec))
+      return(mostCommonLetter)
+}
