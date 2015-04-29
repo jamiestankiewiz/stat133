@@ -1,0 +1,6 @@
+multiple syntax error  -2
+redundant implementation of oneBoot  -1
+line 233: use quadratic fit for degree=2  -2
+wrong bootPlot  -4
+
+Score:  11/20
