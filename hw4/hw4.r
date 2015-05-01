@@ -39,7 +39,6 @@ powers <- function(x,k) {
       return(x.powers)
    } #end all
    
-
  
 #### Function #3
 #### Implement the function "recipeConversion"
@@ -69,6 +68,7 @@ powers <- function(x,k) {
 # function should stop and print out an error message
 
 # Put your code here
+
 recipeConversion <- function(recipe) {
    stopifnot(all(colnames(recipe) == c("amount", "unit", "ingredient")))
    
