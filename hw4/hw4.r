@@ -17,6 +17,7 @@
 listLengths <- function(data.list) {
   element.lengths <- length(data.list)
     # your code here
+  return(element.lengths)
 }
 
 #### Function 2
@@ -109,6 +110,7 @@ bootstrapVarEst <- function(x, B){
     mu_i[i] <- mean(bootstrapsample)
   }
   boot.sigma2.ext <-  var(mu_i)
+  return(boot.sigma2.ext)
 }
   
 
@@ -147,6 +149,7 @@ jackknifeVarEst <- function(x){
         }
    } #end for loop
         jack.sigma2.est <- var(mu_i)
+      return(jack.sigma2.est)
 }
 
 #### Function #4c
