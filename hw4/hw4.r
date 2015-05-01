@@ -32,16 +32,6 @@ listLengths <- function(data.list) {
 #              the column names should be : "x", "x^2", "x^3" etc.
 
 powers <- function(x,k) {
-<<<<<<< HEAD
-    # x.powers <- matrix(nrow=k, ncol=x)
-       # for (rows in 1:k) {
-       #  for (cols in 1:x) {
-       #     x.powers[rows,cols] <- x^cols
-       #   } #end col loop
-       #  } #end row loop
-       #  return(x.powers)
-}
-=======
       x.powers <- matrix(nrow=length(x), ncol=k)
       for (i in 1:k) {
          x.powers[,i] <- x^i
@@ -49,8 +39,6 @@ powers <- function(x,k) {
       return(x.powers)
    } #end all
    
-
->>>>>>> 915437673a907af0ef313f007a87f4b7d10301b9
  
 #### Function #3
 #### Implement the function "recipeConversion"
@@ -80,17 +68,7 @@ powers <- function(x,k) {
 # function should stop and print out an error message
 
 # Put your code here
-<<<<<<< HEAD
-recipeConversion <- function(recipe){
-      stopifnot(all(colnames(recipe) == c("amount", "unit", "ingredient")))
-      if (unit %in% recipe == "cup") {
-        replace("cup", values= "ml")
-     }
-     if (match(recipe$amount, recipe$unit=="cup")) {
-       replace(amount, values = 236.6*amount)
-      }
-     return(recipe)
-=======
+
 recipeConversion <- function(recipe) {
    stopifnot(all(colnames(recipe) == c("amount", "unit", "ingredient")))
    
@@ -105,7 +83,6 @@ recipeConversion <- function(recipe) {
       replace(temp$amount, values=28.3*temp$amount)
       replace("oz" %in% recipe$unit, values="gr")
    }
->>>>>>> 915437673a907af0ef313f007a87f4b7d10301b9
 }
 
 
