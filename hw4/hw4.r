@@ -32,9 +32,11 @@ listLengths <- function(data.list) {
 
 powers <- function(x,k) {
   x.powers <- matrix(nrow=k, ncol=x)
-  for (rows in 1:k)
-    for (cols in 1:x)
+  for (rows in 1:k) {
+    for (cols in 1:x) {
       x.powers[rows,cols] <- x^cols
+    } #end col loop
+  } #end row loop
   return(x.powers)
 }
  
@@ -68,11 +70,13 @@ powers <- function(x,k) {
 # Put your code here
 recipeConversion <- function(recipe){
   stopifnot(all(colnames(recipe) == c("amount", "unit", "ingredient")))
-  if (unit %in% recipe == "cup")
+  if (unit %in% recipe == "cup") {
     replace("cup", values= "ml")
-  if (match(recipe$amount, recipe$unit=="cup"))
+  }
+  if (match(recipe$amount, recipe$unit=="cup")) {
     replace(amount, values = 236.6*amount)
- 
+  }
+  return(recipe)
 }
 
 
