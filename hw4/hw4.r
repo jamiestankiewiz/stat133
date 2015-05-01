@@ -128,18 +128,21 @@ bootstrapVarEst <- function(x, B){
 
 # PLEASE READ THE DOC FOR IF/ELSE STATEMENTS, THANKS --ANDY
 jackknifeVarEst <- function(x){
-    # lenx <- length(x)
-  # for (i in 1:lenx) {
-      #  if i = 1
-      #  mu_i[1] <- mean(x[2:lenx])
-      # if i = lenx
-      # mu_i[lenx] <- mean(x[1:(lenx-1)])
-      # else
-      #  part1 <- x[1:(i-1)]
-         #  part2 <- x[(i+1):lenx]
-         #  mu_i[i] <- mean(part1 + part2)
-         #  }
-         #  jack.sigma2.est <- var(mu_i)
+     lenx <- length(x)
+   for (i in 1:lenx) {
+        if (i == 1) {
+             mu_i[1] <- mean(x[2:lenx])
+             } #end if 
+        if (i == lenx) {
+            mu_i[lenx] <- mean(x[1:(lenx-1)])
+            } #end if
+       else{
+            part1 <- x[1:(i-1)]
+            part2 <- x[(i+1):lenx]
+            mu_i[i] <- mean(part1 + part2)
+        }
+   } #end for loop
+        jack.sigma2.est <- var(mu_i)
 }
 
 #### Function #4c
@@ -155,11 +158,14 @@ jackknifeVarEst <- function(x){
 # Note: this function calls the previous two functions.
 
 samplingVarEst <- function(x,type){
-    #  if type == "bootstrap"
-    #  out <- bootstrapvarest(x,1000)
-    #  else
-    #    out <- jackknifevarest(x)
-}
+      if (type == "bootstrap") {
+         out <- bootstrapvarest(x,1000)
+         } #end if
+      else {
+         out <- jackknifevarest(x)
+         }  #end if
+      return(out)
+} #end function
 
 #sampling.sigma.est <- out
 
