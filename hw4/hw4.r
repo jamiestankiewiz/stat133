@@ -32,13 +32,13 @@ listLengths <- function(data.list) {
 #              the column names should be : "x", "x^2", "x^3" etc.
 
 powers <- function(x,k) {
-  x.powers <- matrix(nrow=k, ncol=x)
-  for (rows in 1:k) {
-    for (cols in 1:x) {
-      x.powers[rows,cols] <- x^cols
-    } #end col loop
-  } #end row loop
-  return(x.powers)
+    # x.powers <- matrix(nrow=k, ncol=x)
+       # for (rows in 1:k) {
+       #  for (cols in 1:x) {
+       #     x.powers[rows,cols] <- x^cols
+       #   } #end col loop
+       #  } #end row loop
+       #  return(x.powers)
 }
  
 #### Function #3
@@ -70,14 +70,14 @@ powers <- function(x,k) {
 
 # Put your code here
 recipeConversion <- function(recipe){
-  stopifnot(all(colnames(recipe) == c("amount", "unit", "ingredient")))
-  if (unit %in% recipe == "cup") {
-    replace("cup", values= "ml")
-  }
-  if (match(recipe$amount, recipe$unit=="cup")) {
-    replace(amount, values = 236.6*amount)
-  }
-  return(recipe)
+      stopifnot(all(colnames(recipe) == c("amount", "unit", "ingredient")))
+      if (unit %in% recipe == "cup") {
+        replace("cup", values= "ml")
+     }
+     if (match(recipe$amount, recipe$unit=="cup")) {
+       replace(amount, values = 236.6*amount)
+      }
+     return(recipe)
 }
 
 
