@@ -15,8 +15,9 @@
 
 
 listLengths <- function(data.list) {
-  element.lengths <- length(data.list)
-    # your code here
+   element.lengths <- sapply(data.list, length)
+      # your code here
+  return(element.lengths)
 }
 
 #### Function 2
@@ -31,12 +32,13 @@ listLengths <- function(data.list) {
 #              the column names should be : "x", "x^2", "x^3" etc.
 
 powers <- function(x,k) {
-  x.powers <- matrix(nrow=k, ncol=x)
-  for (rows in 1:k)
-    for (cols in 1:x)
-      x.powers[rows,cols] <- x^cols
-  return(x.powers)
-}
+      x.powers <- matrix(nrow=length(x), ncol=k)
+      for (i in 1:k) {
+         x.powers[,i] <- x^i
+      }
+      return(x.powers)
+   } #end all
+   
  
 #### Function #3
 #### Implement the function "recipeConversion"
@@ -66,15 +68,22 @@ powers <- function(x,k) {
 # function should stop and print out an error message
 
 # Put your code here
-recipeConversion <- function(recipe){
-  stopifnot(all(colnames(recipe) == c("amount", "unit", "ingredient")))
-  if (unit %in% recipe == "cup")
-    replace("cup", values= "ml")
-  if (match(recipe$amount, recipe$unit=="cup"))
-    replace(amount, values = 236.6*amount)
- 
-}
 
+recipeConversion <- function(recipe) {
+   stopifnot(all(colnames(recipe) == c("amount", "unit", "ingredient")))
+   
+   if (recipe$unit %in% "cups"){
+      temp <- recipe[,unit=="cups"]
+      replace(temp$amount, values=236.5*temp$amount)
+      replace("cups" %in% recipe$unit, values="ml")
+   }
+   
+   if(unit %in% "oz"){
+      temp <- recipe[,unit=="oz"]
+      replace(temp$amount, values=28.3*temp$amount)
+      replace("oz" %in% recipe$unit, values="gr")
+   }
+}
 
 
 #### Function #4a
@@ -100,11 +109,14 @@ recipeConversion <- function(recipe){
 
 B <- 1:1000
 bootstrapVarEst <- function(x, B){
+   mu_i <- vector("numeric", B)
+   n <- length(x)
   for (i in 1:B) {
     bootstrapsample <- sample(B, size=n, replace=T) 
     mu_i[i] <- mean(bootstrapsample)
   }
   boot.sigma2.ext <-  var(mu_i)
+  return(boot.sigma2.ext)
 }
   
 
@@ -128,18 +140,23 @@ bootstrapVarEst <- function(x, B){
 
 # PLEASE READ THE DOC FOR IF/ELSE STATEMENTS, THANKS --ANDY
 jackknifeVarEst <- function(x){
-    # lenx <- length(x)
-  # for (i in 1:lenx) {
-      #  if i = 1
-      #  mu_i[1] <- mean(x[2:lenx])
-      # if i = lenx
-      # mu_i[lenx] <- mean(x[1:(lenx-1)])
-      # else
-      #  part1 <- x[1:(i-1)]
-         #  part2 <- x[(i+1):lenx]
-         #  mu_i[i] <- mean(part1 + part2)
-         #  }
-         #  jack.sigma2.est <- var(mu_i)
+     lenx <- length(x)
+     mu_i <- vector("numeric", lenx)
+   for (i in 1:lenx) {
+        if (i == 1) {
+             mu_i[1] <- mean(x[2:lenx])
+             } #end if 
+        if (i == lenx) {
+            mu_i[lenx] <- mean(x[1:(lenx-1)])
+            } #end if
+       else{
+            part1 <- x[1:(i-1)]
+            part2 <- x[(i+1):lenx]
+            mu_i[i] <- mean(c(part1, part2))
+        }
+   } #end for loop
+        jack.sigma2.est <- var(mu_i)
+      return(jack.sigma2.est)
 }
 
 #### Function #4c
@@ -155,11 +172,15 @@ jackknifeVarEst <- function(x){
 # Note: this function calls the previous two functions.
 
 samplingVarEst <- function(x,type){
-    #  if type == "bootstrap"
-    #  out <- bootstrapvarest(x,1000)
-    #  else
-    #    out <- jackknifevarest(x)
-}
+      if (type == "bootstrap") {
+         B <- 1:1000
+         out <- bootstrapVarEst(x,B)
+         } #end if
+      else {
+         out <- jackknifeVarEst(x)
+         }  #end if
+      return(out)
+} #end function
 
 #sampling.sigma.est <- out
 

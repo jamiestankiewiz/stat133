@@ -46,8 +46,8 @@ mtcars <- cbind(mtcars, model = row.names(mtcars))
 # Finally use the 'options' argument to add axis labels and main title.
 
 # optionlist <- < your code here>
-optionlist <- list(hAxis.title='Disp', yAxis.title='mpg')
-colors=mtcars$gear, 
+optionlist <- list(title= 'Data of Cars', vAxis="{title: 'Disp'}", hAxis="{title: 'mpg'}")
+ 
 # bub <- gvisBubbleChart( < your code here >)
 bub <- gvisBubbleChart(mtcars, idvar="model", xvar="disp", yvar="mpg", colorvar="gear", sizevar="hp", options=optionlist)
 
