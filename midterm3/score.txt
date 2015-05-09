@@ -1,0 +1,32 @@
+Total: 12/20
+
+Function 1
+4/5
+Line 15 should be 
+      if("$" %in% unlist(strsplit(chvec[i], “”)))
+Then you need sum rather than length on line 18.
+
+
+Function 2
+3/5
+Line 29 needs an unlist i.e. unlist(strsplit(chvec, split)
+Line 34 could be return(prod(as.numeric(vec), na.rm = TRUE))
+
+
+Function 3
+3/5 
+You could have “herchvec” in line 55 and 56, e.g.  gsub("he\\>", "she", herchvec) 
+This will miss some of the required substitutions e.g.
+> hisToher("this")
+[1] "ther"
+To fix this use word beginning boundaries e.g. gsub(“\\<he\\>", "she", herchvec)
+
+Function 4
+2/5
+“[[:alpha:]]” rather than “[:alpha:]” is used to refer to all letters.
+It may be implemented before strsplit, say:
+
+chvec <- gsub(“[[:alpha:]], “”, chvec)
+chvec <- unlist(strsplit(chvec, split = “”))
+
+Then call table(chvec) and find the entries in the table corresponding to the maximum.
