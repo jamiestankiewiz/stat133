@@ -447,11 +447,11 @@ match1 <- grep("A[[:upper:]]T",dna)
 # [2 pts]
 # Create a vector [dna2] where you have removed all entries whose length is not a multiple of 3
 # dna2 <- <your code here>
-dna2 <- 
-  dna2<- strsplit(dna,"")
-  lengths <- sapply(dna2, length)
-  ((lengths%%3==0)==T){
-    
-  }
+#dna2 <- # ANdy
+#  dna2<- strsplit(dna,"")
+#  lengths <- sapply(dna2, length)
+#  ((lengths%%3==0)==T){
+#    
+#  }
 #################################################################
 
