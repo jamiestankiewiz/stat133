@@ -184,7 +184,8 @@ text(1998, 260, wr_1998)
 # It can be loaded into R with
 
 # load( your code here )
-load("C:/Users/Jamie/src/stat133/assignments/hw2/SummerOlympics2012Ctry.rda")
+# load("C:/Users/Jamie/src/stat133/assignments/hw2/SummerOlympics2012Ctry.rda")
+load("SummerOlympics2012Ctry.rda")
 
 #Q6 Take a look at the variables in this data frame.
 # What kind of variable is GDP and population?
@@ -352,7 +353,8 @@ symbols(wonMedal$longitude, wonMedal$latitude, circles=sqrt(wonMedal$Total), add
 # in the Olympics.
 
 # load( )
-load("C:/Users/Jamie/src/stat133/assignments/hw2/London2012ALL_ATHLETES.rda")
+# load("C:/Users/Jamie/src/stat133/assignments/hw2/London2012ALL_ATHLETES.rda")
+load("London2012ALL_ATHLETES.rda")
 
 # There is one observation for each athlete. 
 # (Actually, about 20 athletes have two records if they
