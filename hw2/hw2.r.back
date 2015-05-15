@@ -277,7 +277,7 @@ text(log(decmedal$GDPPP)[1:5], log(decmedal$pop)[1:5], top5)
 # where the countries are filled with a light grey color.
 
 ## you only need to run these two lines once:
-#install.packages("maps")
+install.packages("maps")
 library("maps")
 
 # world <- map(code )
@@ -320,7 +320,7 @@ symbols(wonMedal$longitude, wonMedal$latitude, circles=sqrt(wonMedal$Total), add
 # e.g. myColor = "#FEB24CAA" or   "#FEB24C88"
 
 # You only need to call these two lines once:
-#install.packages("RColorBrewer")
+install.packages("RColorBrewer")
 library("RColorBrewer")
 
 # display.brewer.all( your code here )
