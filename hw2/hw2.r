@@ -51,6 +51,7 @@
 # the hw3 directory in the file WR1500MeterMen.rda.
 
 # load the data
+load("WR1500MeterMen.rda")
 
 # The name of the object loaded is wr1500m
 # The time (in the column "times") in these data are recorded in seconds, 
@@ -239,7 +240,7 @@ symbols(log(GDP_per_person), log(SO2012Ctry$pop), circles=(SO2012Ctry$Total))
 
 # your plotting code here
 symbols(log(GDP_per_person[SO2012Ctry$Total>0]), log(SO2012Ctry$pop[SO2012Ctry$Total>0]), circles=sqrt(SO2012Ctry$Total[SO2012Ctry$Total>0]), main="Top 5 Countries with Most Medals in Summer 2012 Olympics", xlab= "Country GDP per Person", ylab="Country Population")
-symbols(log(GDP_per_person[SO2012Ctry$Total==0]), log(SO2012Ctry$pop[SO2012Ctry$Total==0]), circles=log(SO2012Ctry$Total[SO2012Ctry$Total ==0]), add=T)
+#symbols(log(GDP_per_person[SO2012Ctry$Total==0]), log(SO2012Ctry$pop[SO2012Ctry$Total==0]), circles=log(SO2012Ctry$Total[SO2012Ctry$Total==0]), add=T)
 
 
 # Q9. Make the plot information rich by adding axis labels, 
@@ -266,7 +267,7 @@ top5<- decmedal$Country[1:5]
 
 # your plotting code here, including a new call to text() 
 symbols(log(GDP_per_person[SO2012Ctry$Total>0]), log(SO2012Ctry$pop[SO2012Ctry$Total>0]), circles=sqrt(SO2012Ctry$Total[SO2012Ctry$Total>0]), main="Top 5 Countries with Most Medals in Summer 2012 Olympics", xlab= "Country GDP per Person", ylab="Country Population")
-symbols(log(GDP_per_person[SO2012Ctry$Total==0]), log(SO2012Ctry$pop[SO2012Ctry$Total==0]), circles=log(SO2012Ctry$Total[SO2012Ctry$Total ==0]), add=T)
+#symbols(log(GDP_per_person[SO2012Ctry$Total==0]), log(SO2012Ctry$pop[SO2012Ctry$Total==0]), circles=log(SO2012Ctry$Total[SO2012Ctry$Total ==0]), add=T)
 text(log(decmedal$GDPPP)[1:5], log(decmedal$pop)[1:5], top5)
 
 ######################################
