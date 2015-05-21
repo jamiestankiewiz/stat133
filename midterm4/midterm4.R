@@ -65,7 +65,7 @@ hotelCal.split <- { hotelCal <- tolower(hotelCal)
                     hotelCal <- unlist(strsplit(hotelCal,""))
                     hotelCal <- hotelCal[hotelCal != "[:punct:]"]
                     hotelCal <- paste(hotelCal,"")
-                    hotelCal <- strsplit(hotelCal, collapse="")
+                   # hotelCal <- strsplit(hotelCal, collapse="")
                     return(hotelCal) 
 }
 
