@@ -1,0 +1,143 @@
+INFO:root:Executed R('load(\'../../instructor/assignments/midterm4/midterm4-tests.rda\')')
+INFO:root:Executed R('set.seed(47)')
+INFO:root:Executed R('dice_sum.output <- dice_sum(3, 10)')
+ERROR:root:(2 points) Checking R('all.equal(dice_sum.output, sol$dice.out, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is NULL, current is numeric
+ERROR:root:(2 points) Checking R('all.equal(length(dice_sum.output), 10, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Mean absolute difference: 10
+INFO:root:(1 points) R('all(dice_sum.output>2 & dice_sum.output<19)')[0] is True
+ERROR:root:(1 points) Checking R('all.equal(length(text1), length(sol$text1), check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Mean relative difference: 3
+ERROR:root:(1 points) Checking R('all.equal(text1, sol$text1, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Length mismatch: comparison on first 1 components
+ERROR:root:(1 points) Checking R('all.equal(text1, sol$text1alt, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Length mismatch: comparison on first 1 components
+INFO:root:(1 points) R('all.equal(length(text2), length(sol$text2), check.attributes=F)')[0] is True
+ERROR:root:(1 points) Checking R('all.equal(text2, sol$text2, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is numeric
+INFO:root:(1 points) R('all.equal(text2, sol$text2alt, check.attributes=F)')[0] is True
+ERROR:root:(1 points) Checking R('all.equal(no.punct, sol$no.punct, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is numeric
+INFO:root:(1 points) R('all.equal(length(even), length(sol$even), check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(even, sol$even, check.attributes=F)')[0] is True
+ERROR:root:(4 points) Checking R('all(length(hotelCal.split)>75 & length(hotelCal.split)<90)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   False
+ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Lengths (407, 83) differ (string compare on first 83)
+ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split1, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split2, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split3, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split4, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split5, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split6, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split7, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is NULL
+INFO:root:(2 points) R('all.equal(updateDate(sol$test.date1[[1]], sol$test.date1[[2]]), sol$test.date1.out)')[0] is True
+INFO:root:(2 points) R('all.equal(updateDate(sol$test.date2[[1]], sol$test.date2[[2]]), sol$test.date2.out)')[0] is True
+ERROR:root:(1 points) Checking R('all.equal(updateDate(sol$test.date3[[1]], sol$test.date3[[2]]), sol$test.date3.out)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Lengths (0, 2) differ (string compare on first 0)
+INFO:root:Executed R('abbreviate.output <- abbreviate(sol$abbr.in, 3)')
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in paste(temp3, collapse = "") : object 'temp3' not found
+
+ERROR:root:Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in paste(temp3, collapse = "") : object 'temp3' not found
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in paste(temp3, collapse = "") : object 'temp3' not found
+
+ERROR:root:(3 points) Checking R('all.equal(abbreviate.output, sol$abbr.out)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(abbreviate.output, sol$abbr.out) : 
+  object 'abbreviate.output' not found
+
+ERROR:root:Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(abbreviate.output, sol$abbr.out) : 
+  object 'abbreviate.output' not found
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/__init__.py", line 269, in __call__
+    res = self.eval(p)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 170, in __call__
+    return super(SignatureTranslatedFunction, self).__call__(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/functions.py", line 100, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+RRuntimeError: Error in all.equal(abbreviate.output, sol$abbr.out) : 
+  object 'abbreviate.output' not found
+
+INFO:root:You got a 9 out of 27.

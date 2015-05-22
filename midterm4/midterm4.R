@@ -61,13 +61,14 @@ even <- paste("even", seq(2,2*1000,2), sep="")
 hotelCal <- "On a dark desert highway, cool wind in my hair. Warm smell of colitas, rising up through the air. Up ahead in the distance, I saw a shimmering light. My head grew heavy and my sight grew dim I had to stop for the night.  There she stood in the doorway; I heard the mission bell.  And I was thinking to myself: 'This could be heaven or this could be hell'. Then she lit up a candle and she showed me the way."
 
 # hotelCal.split <- <your code here> 
-hotelCal.split <- { hotelCal <- tolower(hotelCal)
+# hotelCal.split <- {
+    hotelCal <- tolower(hotelCal)
                     hotelCal <- unlist(strsplit(hotelCal,""))
                     hotelCal <- hotelCal[hotelCal != "[:punct:]"]
                     hotelCal <- paste(hotelCal,"")
                    # hotelCal <- strsplit(hotelCal, collapse="")
-                    return(hotelCal) 
-}
+                    hotelCal.split <- hotelCal
+#}
 
 # Write a function called updateDate. Your function should take the following
 # arguments
@@ -93,5 +94,5 @@ updateDate <- function(dates, old.yr) {
 abbreviate <- function(vector, k){
    temp <- strsplit(paste(temp3, collapse=""), "")
    temp <- unlist(temp)
-   print(temp[1:k])
+   return(temp[1:k])
 }
