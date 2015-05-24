@@ -395,10 +395,15 @@ return(n.jackpot)
 k = c(100,500,1000,5000)
 # <your plot here>
 par(mfrow=c(2,2))
-hist(NumJackpot(100,5000))
-hist(NumJackpot(500,5000))
-hist(NumJackpot(1000,5000))
-hist(NumJackpot(5000,5000))
+# inga
+#hist(NumJackpot(100,5000))
+#hist(NumJackpot(500,5000))
+#hist(NumJackpot(1000,5000))
+#hist(NumJackpot(5000,5000))
+hist(NumJackpot(100,100))
+hist(NumJackpot(500,100))
+hist(NumJackpot(1000,100))
+hist(NumJackpot(5000,100))
 #################################################################
 ##### PART VI : string manipulation and regular expressions [20 pts]
 
